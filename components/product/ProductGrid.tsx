@@ -1,4 +1,5 @@
 import { ProductCard } from "@/components/product/ProductCard";
+import { Text } from "@/components/ui/Text";
 import type { Product } from "@/lib/products";
 
 type ProductGridProps = {
@@ -8,9 +9,12 @@ type ProductGridProps = {
 export function ProductGrid({ products }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <p className="rounded-lg border border-dashed border-border bg-surface px-6 py-12 text-center text-muted">
+      <Text
+        variant="body-sm"
+        className="rounded-lg border border-dashed border-border bg-surface px-6 py-12 text-center"
+      >
         No products yet.
-      </p>
+      </Text>
     );
   }
 

@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
+import { Text } from "@/components/ui/Text";
 
 type SectionProps = {
   children: ReactNode;
@@ -23,26 +25,22 @@ export function Section({
   eyebrow,
 }: SectionProps) {
   return (
-    <section id={id} className={cx("py-14 md:py-20", className)}>
+    <section id={id} className={cx("py-section md:py-section-md", className)}>
       <Container>
         {(eyebrow || title || description) && (
-          <div className="mb-8 max-w-2xl md:mb-10">
+          <Reveal className="mb-split max-w-2xl md:mb-cell-md">
             {eyebrow ? (
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              <Text variant="eyebrow" className="mb-2">
                 {eyebrow}
-              </p>
+              </Text>
             ) : null}
-            {title ? (
-              <h2 className="font-display text-3xl font-bold tracking-tight text-ink md:text-4xl">
-                {title}
-              </h2>
-            ) : null}
+            {title ? <Text variant="h2">{title}</Text> : null}
             {description ? (
-              <p className="mt-3 text-base leading-relaxed text-muted md:text-lg">
+              <Text variant="body" className="mt-stack">
                 {description}
-              </p>
+              </Text>
             ) : null}
-          </div>
+          </Reveal>
         )}
         {children}
       </Container>

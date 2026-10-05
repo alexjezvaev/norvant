@@ -24,11 +24,11 @@ export function Logo({
     <Image
       src="/logo.svg"
       alt={site.name}
-      width={266}
-      height={59}
+      width={324}
+      height={37}
       priority={priority}
       className={cx(
-        "h-8 w-auto md:h-9",
+        "h-5 w-auto md:h-6",
         onDark && "brightness-0 invert",
         className,
       )}
@@ -40,7 +40,11 @@ export function Logo({
   }
 
   return (
-    <Link href={href} className="inline-flex shrink-0 items-center" aria-label={site.name}>
+    <Link
+      href={href}
+      className="inline-flex shrink-0 items-center"
+      aria-label={site.name}
+    >
       {image}
     </Link>
   );

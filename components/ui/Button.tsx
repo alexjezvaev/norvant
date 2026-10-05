@@ -9,8 +9,7 @@ const variantClasses: Record<ButtonVariant, string> = {
     "bg-accent text-accent-ink hover:brightness-95 focus-visible:outline-accent",
   secondary:
     "border border-border bg-surface text-ink hover:border-ink/30 focus-visible:outline-ink",
-  ghost:
-    "bg-transparent text-ink hover:bg-ink/5 focus-visible:outline-ink",
+  ghost: "bg-transparent text-ink hover:bg-ink/5 focus-visible:outline-ink",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

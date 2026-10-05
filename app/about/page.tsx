@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { AboutCta } from "@/components/about/AboutCta";
-import { Quality } from "@/components/about/Quality";
-import { WorkFootwear } from "@/components/about/WorkFootwear";
+import { BuiltForDifferentIndustries } from "@/components/about/BuiltForDifferentIndustries";
+import { Hero } from "@/components/about/Hero";
+import { InternationalPerspective } from "@/components/about/InternationalPerspective";
+import { OurApproach } from "@/components/about/OurApproach";
+import { SpecialisedProduction } from "@/components/about/SpecialisedProduction";
+import { WhoWeAre } from "@/components/about/WhoWeAre";
 
 export const metadata: Metadata = {
   title: "About",
@@ -12,8 +16,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <WorkFootwear />
-      <Quality />
+      <Hero />
+      <WhoWeAre />
+      <InternationalPerspective />
+      <SpecialisedProduction />
+      <BuiltForDifferentIndustries />
+      <OurApproach />
       <AboutCta />
     </>
   );

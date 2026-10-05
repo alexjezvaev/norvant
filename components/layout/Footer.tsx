@@ -1,5 +1,6 @@
 import { Logo } from "@/components/brand/Logo";
 import { Container } from "@/components/ui/Container";
+import { Text } from "@/components/ui/Text";
 import { navLinks, site } from "@/lib/site";
 import Link from "next/link";
 
@@ -8,16 +9,14 @@ export function Footer() {
     <footer className="mt-auto border-t border-border bg-hero text-white">
       <Container className="grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr] md:py-14">
         <div>
-          <Logo onDark href="/" className="h-9 md:h-10" />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
+          <Logo onDark href="/" className="h-6 md:h-7" />
+          <Text variant="body-sm" tone="white-soft" className="mt-4 max-w-sm">
             {site.tagline}
-          </p>
+          </Text>
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
-            Pages
-          </p>
+          <Text variant="eyebrow-faint">Pages</Text>
           <ul className="mt-4 space-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -33,12 +32,13 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
-            Contact
-          </p>
+          <Text variant="eyebrow-faint">Contact</Text>
           <ul className="mt-4 space-y-2 text-sm text-white/80">
             <li>
-              <a href={`tel:${site.phone.replace(/[^\d+]/g, "")}`} className="hover:text-white">
+              <a
+                href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
+                className="hover:text-white"
+              >
                 {site.phone}
               </a>
             </li>
@@ -53,9 +53,13 @@ export function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-2 py-4 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <p>Work footwear, delivered nationwide</p>
+        <Container className="flex flex-col gap-2 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <Text variant="caption" tone="white-dim">
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
+          </Text>
+          <Text variant="caption" tone="white-dim">
+            Work footwear, delivered nationwide
+          </Text>
         </Container>
       </div>
     </footer>

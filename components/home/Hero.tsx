@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
+import { Text } from "@/components/ui/Text";
 import { site } from "@/lib/site";
 
 export function Hero() {
@@ -19,26 +21,26 @@ export function Hero() {
         aria-hidden
       />
 
-      <Container className="relative flex h-full flex-col justify-center py-8 md:py-12">
-        <h1 className="font-display text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
-          {site.name.toUpperCase()} Sport Line
-        </h1>
-        <p className="mt-4 max-w-xl font-display text-2xl leading-tight tracking-tight text-white/85 md:text-4xl">
-          {site.tagline}
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="/catalog" size="lg">
-            Browse catalog
-          </Button>
-          <Button
-            href="/about"
-            variant="secondary"
-            size="lg"
-            className="border-white/25 bg-transparent text-white hover:border-white/50 hover:bg-white/10"
-          >
-            About
-          </Button>
-        </div>
+      <Container className="relative flex h-full flex-col justify-center py-split md:py-split-md">
+        <Reveal immediate>
+          <Text variant="hero">{site.name.toUpperCase()} Sport Line</Text>
+          <Text variant="hero-lead" className="mt-stack max-w-xl">
+            {site.tagline}
+          </Text>
+          <div className="mt-split flex flex-wrap gap-3">
+            <Button href="/catalog" size="lg">
+              Browse catalog
+            </Button>
+            <Button
+              href="/about"
+              variant="secondary"
+              size="lg"
+              className="border-white/25 bg-transparent text-white hover:border-white/50 hover:bg-white/10"
+            >
+              About
+            </Button>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

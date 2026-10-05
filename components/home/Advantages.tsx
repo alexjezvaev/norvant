@@ -1,4 +1,6 @@
 import { Section } from "@/components/ui/Section";
+import { Stagger, StaggerItem } from "@/components/ui/Stagger";
+import { Text } from "@/components/ui/Text";
 
 const advantages = [
   {
@@ -18,21 +20,24 @@ const advantages = [
 export function Advantages() {
   return (
     <Section
+      className="bg-bg-subtle"
       eyebrow="Why Norvant"
       title="Footwear for the job, not just another boot"
       description="What the NORVANT Sport Line range is built around."
     >
-      <ul className="grid gap-8 border-t border-border pt-8 md:grid-cols-3 md:gap-10">
+      <Stagger
+        as="ul"
+        delay={0.08}
+        className="grid gap-split border-t border-border pt-split md:grid-cols-3 md:gap-cell-md"
+      >
         {advantages.map((item, index) => (
-          <li key={item.title} className="space-y-2">
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
-              0{index + 1}
-            </p>
-            <h3 className="font-display text-xl font-bold text-ink">{item.title}</h3>
-            <p className="text-sm leading-relaxed text-muted md:text-base">{item.text}</p>
-          </li>
+          <StaggerItem as="li" key={item.title} className="space-y-2">
+            <Text variant="eyebrow">0{index + 1}</Text>
+            <Text variant="h3">{item.title}</Text>
+            <Text variant="body-sm">{item.text}</Text>
+          </StaggerItem>
         ))}
-      </ul>
+      </Stagger>
     </Section>
   );
 }

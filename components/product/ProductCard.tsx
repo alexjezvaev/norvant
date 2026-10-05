@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Text } from "@/components/ui/Text";
 import { productSpecLabels, type Product } from "@/lib/products";
 
 type ProductCardProps = {
@@ -27,9 +28,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col gap-4 p-4 md:p-5">
-        <h3 className="font-display text-xl font-bold tracking-tight text-ink">
-          {product.name}
-        </h3>
+        <Text variant="h3">{product.name}</Text>
 
         <dl className="mt-auto divide-y divide-border border-t border-border">
           {productSpecLabels.map(({ key, label }) => (
@@ -37,12 +36,8 @@ export function ProductCard({ product }: ProductCardProps) {
               key={key}
               className="grid grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-3 py-2.5 first:pt-3"
             >
-              <dt className="text-xs uppercase tracking-[0.08em] text-muted">
-                {label}
-              </dt>
-              <dd className="text-sm font-medium leading-snug text-ink">
-                {product.specs[key]}
-              </dd>
+              <Text variant="meta">{label}</Text>
+              <Text variant="detail">{product.specs[key]}</Text>
             </div>
           ))}
         </dl>

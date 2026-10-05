@@ -2,12 +2,16 @@
 
 :root {
   /* Brand */
-  --brand: #2f3682;
-  --ink: #29272e;
+  --brand: #2d3686;
+  --ink: #29272f;
   --surface: #ffffff;
 
+  /* Backgrounds */
+  --bg: #ffffff;
+  /* Highlighted section bands */
+  --bg-subtle: #f4f5f8;
+
   /* Derived */
-  --bg: #f4f5f8;
   --muted: #6b6972;
   --accent: var(--brand);
   --accent-ink: #ffffff;
@@ -15,11 +19,29 @@
   --success: #2f6b4f;
   --hero: var(--ink);
   --brand-soft: #e8e9f3;
+  --brand-light: #e9f3fc;
   --brand-deep: #242a66;
 
   --r-sm: 0.25rem;
   --r-md: 0.5rem;
   --r-lg: 0.75rem;
+
+  /* Layout spacing */
+  --section-py: 3.5rem;
+  --section-py-md: 5rem;
+  --stack-gap: 1rem;
+  --stack-gap-md: 1.25rem;
+  --split-gap: 2rem;
+  --split-gap-md: 3rem;
+  --split-gap-lg: 4rem;
+  --block-gap: 3rem;
+  --block-gap-md: 4rem;
+  --icon-gap: 1.25rem;
+  --icon-lg: 4rem;
+  --icon-md: 3rem;
+  --cell-py: 2rem;
+  --cell-py-md: 2.5rem;
+  --cell-px: 2rem;
 
   --container-max: 72rem;
   --header-height: 4rem;
@@ -33,6 +55,7 @@
 
 @theme inline {
   --color-bg: var(--bg);
+  --color-bg-subtle: var(--bg-subtle);
   --color-surface: var(--surface);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
@@ -43,6 +66,7 @@
   --color-hero: var(--hero);
   --color-brand: var(--brand);
   --color-brand-soft: var(--brand-soft);
+  --color-brand-light: var(--brand-light);
   --color-brand-deep: var(--brand-deep);
 
   --font-sans: var(--font-body), "Helvetica Neue", sans-serif;
@@ -51,6 +75,22 @@
   --radius-sm: var(--r-sm);
   --radius-md: var(--r-md);
   --radius-lg: var(--r-lg);
+
+  --spacing-section: var(--section-py);
+  --spacing-section-md: var(--section-py-md);
+  --spacing-stack: var(--stack-gap);
+  --spacing-stack-md: var(--stack-gap-md);
+  --spacing-split: var(--split-gap);
+  --spacing-split-md: var(--split-gap-md);
+  --spacing-split-lg: var(--split-gap-lg);
+  --spacing-block: var(--block-gap);
+  --spacing-block-md: var(--block-gap-md);
+  --spacing-icon-gap: var(--icon-gap);
+  --spacing-icon-lg: var(--icon-lg);
+  --spacing-icon-md: var(--icon-md);
+  --spacing-cell: var(--cell-py);
+  --spacing-cell-md: var(--cell-py-md);
+  --spacing-cell-x: var(--cell-px);
 }
 
 body {
