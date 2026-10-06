@@ -16,7 +16,7 @@ export function Footer() {
         </div>
 
         <div>
-          <Text variant="eyebrow-faint">Pages</Text>
+          <Text variant="eyebrow-faint">Explore</Text>
           <ul className="mt-4 space-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -36,29 +36,28 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-white/80">
             <li>
               <a
-                href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
+                href="mailto:sales@norvantsafety.com"
                 className="hover:text-white"
               >
-                {site.phone}
+                sales@norvantsafety.com
               </a>
             </li>
             <li>
-              <a href={`mailto:${site.email}`} className="hover:text-white">
-                {site.email}
+              <a
+                href="mailto:info@norvantsafety.com"
+                className="hover:text-white"
+              >
+                info@norvantsafety.com
               </a>
             </li>
-            <li>{site.address}</li>
           </ul>
         </div>
       </Container>
 
-      <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-2 py-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <Container className="py-4">
           <Text variant="caption" tone="white-dim">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
-          </Text>
-          <Text variant="caption" tone="white-dim">
-            Work footwear, delivered nationwide
           </Text>
         </Container>
       </div>

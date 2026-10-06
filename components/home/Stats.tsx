@@ -4,10 +4,10 @@ import { Stagger, StaggerItem } from "@/components/ui/Stagger";
 import { Text } from "@/components/ui/Text";
 
 const stats = [
-  { value: 15_000, suffix: "+", label: "production and warehouse facilities" },
-  { value: 5_000, suffix: "+", label: "clients across Russia" },
+  { value: 10_000, suffix: "+", label: "production and warehouse facilities" },
+  { value: 5_000, suffix: "+", label: "clients" },
   { value: 300, suffix: "+", label: "items in the catalog" },
-  { value: 250, suffix: "+", label: "experts in the company" },
+  { value: 150, suffix: "+", label: "experts in the company" },
 ] as const;
 
 export function Stats() {

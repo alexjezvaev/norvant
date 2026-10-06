@@ -11,7 +11,7 @@ export function InternationalPerspective() {
         <AboutSplit>
           <Reveal className="flex flex-col justify-center py-section md:py-section-md">
             <AboutSectionHeader
-              eyebrow="International Perspective"
+              eyebrow="Knowledge of market requirements"
               eyebrowTone="accent"
               title="International perspective"
               body="Our experience working with European countries has shaped our attention to standards, materials and long-term comfort. We understand the demands of professional users and design our products to perform in real working environments."

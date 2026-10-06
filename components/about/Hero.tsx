@@ -2,7 +2,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Hero() {
   return (
-    <section className="relative isolate h-72 overflow-hidden md:h-96">
+    <section className="relative isolate h-hero overflow-hidden md:h-hero-md">
       <Reveal immediate className="absolute inset-0">
         <video
           className="size-full object-cover object-center"

@@ -32,7 +32,7 @@ export function BuiltForDifferentIndustries() {
         <Reveal className="flex w-full flex-col justify-center space-y-stack md:w-[60%] md:space-y-stack-md">
           <AboutSectionHeader
             className="contents"
-            eyebrow="Built for Different Industries"
+            eyebrow="Scope of application"
             eyebrowTone="white"
             title="Built for different industries"
             titleTone="white"

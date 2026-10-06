@@ -1,16 +1,16 @@
 import { Logo } from "@/components/brand/Logo";
 import { Container } from "@/components/ui/Container";
-import { navLinks, site } from "@/lib/site";
+import { navLinks } from "@/lib/site";
 import Link from "next/link";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-bg/90 backdrop-blur-md">
-      <Container className="flex h-[var(--header-height)] items-center justify-between gap-6">
+      <Container className="flex h-[var(--header-height)] items-center gap-6">
         <Logo />
 
-        <nav aria-label="Main" className="hidden sm:block">
-          <ul className="flex items-center gap-1">
+        <nav aria-label="Main" className="hidden flex-1 sm:block">
+          <ul className="flex items-center justify-end gap-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -24,14 +24,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <a
-          href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
-          className="hidden text-sm font-semibold text-ink md:inline"
-        >
-          {site.phone}
-        </a>
-
-        <nav aria-label="Mobile" className="sm:hidden">
+        <nav aria-label="Mobile" className="ml-auto sm:hidden">
           <ul className="flex items-center gap-3 text-sm font-medium text-muted">
             <li>
               <Link href="/catalog" className="hover:text-ink">
@@ -41,6 +34,11 @@ export function Header() {
             <li>
               <Link href="/about" className="hover:text-ink">
                 About
+              </Link>
+            </li>
+            <li>
+              <Link href="/contacts" className="hover:text-ink">
+                Contacts
               </Link>
             </li>
           </ul>

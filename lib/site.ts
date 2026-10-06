@@ -1,6 +1,6 @@
 export const site = {
-  name: "Norvant",
-  tagline: "Built for motion. Ready for work.",
+  name: "NORVANT",
+  tagline: "Professional protection for real work.",
   description:
     "NORVANT work footwear combines durability, comfort, and protection for people who work hard every day.",
   phone: "+7 (800) 555-12-34",
@@ -13,4 +13,5 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/catalog", label: "Catalog" },
   { href: "/about", label: "About" },
+  { href: "/contacts", label: "Contacts" },
 ] as const;

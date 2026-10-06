@@ -34,7 +34,7 @@ const variantClasses: Record<TextVariant, string> = {
   hero: "font-display text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl",
   "hero-lead": "font-display text-2xl leading-tight tracking-tight md:text-4xl",
   h2: "font-display text-4xl font-bold tracking-tight md:text-5xl",
-  h3: "font-display text-xl font-bold tracking-tight",
+  h3: "font-display text-2xl font-bold tracking-tight md:text-3xl",
   eyebrow: "text-sm font-bold uppercase",
   "eyebrow-faint": "text-sm font-bold uppercase",
   body: "text-base leading-relaxed md:text-lg",

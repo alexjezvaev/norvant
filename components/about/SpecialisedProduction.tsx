@@ -1,6 +1,6 @@
-import { AboutMedia } from "@/components/about/shared/AboutMedia";
 import { AboutSectionHeader } from "@/components/about/shared/AboutSectionHeader";
 import { AboutSplit } from "@/components/about/shared/AboutSplit";
+import { AboutVideo } from "@/components/about/shared/AboutVideo";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 
@@ -9,9 +9,10 @@ export function SpecialisedProduction() {
     <Section>
       <AboutSplit>
         <Reveal className="h-full min-h-72 md:min-h-0">
-          <AboutMedia
-            src="/about/production-footwear.jpg"
-            alt="Industrial stitching of NORVANT safety footwear"
+          <AboutVideo
+            src="/about/specialised-production.mp4"
+            poster="/about/production-footwear.jpg"
+            label="Industrial stitching of NORVANT safety footwear"
             className="rounded-lg"
           />
         </Reveal>
@@ -21,7 +22,7 @@ export function SpecialisedProduction() {
           className="flex flex-col justify-center"
         >
           <AboutSectionHeader
-            eyebrow="Specialised production"
+            eyebrow="Protective footwear and clothing are our specialty"
             title="Specialised production"
             body={
               <>

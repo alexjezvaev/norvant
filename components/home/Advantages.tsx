@@ -5,7 +5,7 @@ import { Text } from "@/components/ui/Text";
 const advantages = [
   {
     title: "Rated protection",
-    text: "S1–S5 models with steel or composite toe caps and puncture-resistant midsoles.",
+    text: "S1–S3 models with steel or composite toe caps and puncture-resistant midsoles.",
   },
   {
     title: "Built for the shift",
@@ -22,8 +22,8 @@ export function Advantages() {
     <Section
       className="bg-bg-subtle"
       eyebrow="Why Norvant"
-      title="Footwear for the job, not just another boot"
-      description="What the NORVANT Sport Line range is built around."
+      title="The Footwear for the job, not just another boot"
+      description="NORVANT Sport Line range is built around."
     >
       <Stagger
         as="ul"

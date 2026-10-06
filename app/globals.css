@@ -45,6 +45,8 @@
 
   --container-max: 72rem;
   --header-height: 4rem;
+  --hero-height: 18rem;
+  --hero-height-md: 24rem;
 }
 
 @media (min-width: 768px) {
@@ -91,6 +93,8 @@
   --spacing-cell: var(--cell-py);
   --spacing-cell-md: var(--cell-py-md);
   --spacing-cell-x: var(--cell-px);
+  --spacing-hero: var(--hero-height);
+  --spacing-hero-md: var(--hero-height-md);
 }
 
 body {
