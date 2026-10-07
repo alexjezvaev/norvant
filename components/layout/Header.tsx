@@ -1,4 +1,5 @@
 import { Logo } from "@/components/brand/Logo";
+import { MobileNav } from "@/components/layout/MobileNav";
 import { Container } from "@/components/ui/Container";
 import { navLinks } from "@/lib/site";
 import Link from "next/link";
@@ -24,25 +25,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <nav aria-label="Mobile" className="ml-auto sm:hidden">
-          <ul className="flex items-center gap-3 text-sm font-medium text-muted">
-            <li>
-              <Link href="/catalog" className="hover:text-ink">
-                Catalog
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-ink">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/contacts" className="hover:text-ink">
-                Contacts
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <MobileNav />
       </Container>
     </header>
   );
