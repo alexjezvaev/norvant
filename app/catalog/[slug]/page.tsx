@@ -29,9 +29,31 @@ export async function generateMetadata({
     return { title: "Product" };
   }
 
+  const title = product.name;
+  const description =
+    product.description || `${product.name} · ${site.name}`;
+  const path = `/catalog/${product.slug}`;
+  const image = product.images[0];
+
   return {
-    title: product.name,
-    description: product.description || `${product.name} · ${site.name}`,
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      title,
+      description,
+      url: path,
+      siteName: site.name,
+      locale: "en_US",
+      type: "website",
+      ...(image ? { images: [{ url: image, alt: product.name }] } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      ...(image ? { images: [image] } : {}),
+    },
   };
 }
 

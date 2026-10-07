@@ -2,12 +2,20 @@ export const site = {
   name: "NORVANT",
   tagline: "Professional protection for real work.",
   description:
-    "NORVANT work footwear combines durability, comfort, and protection for people who work hard every day.",
+    "Discover NORVANT professional safety footwear and workwear, designed for reliable protection, lasting comfort and demanding working environments.",
   phone: "+7 (800) 555-12-34",
   email: "hello@norvant.ru",
   address: "14 Industrial Street, Moscow",
   themeColor: "#2f3682",
 } as const;
+
+/** Production URL via NEXT_PUBLIC_SITE_URL; falls back to localhost for local/dev. */
+export function getSiteUrl(): string {
+  return (
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+    "http://localhost:3000"
+  );
+}
 
 export const navLinks = [
   { href: "/", label: "Home" },

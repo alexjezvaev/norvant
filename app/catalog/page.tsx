@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { Section } from "@/components/ui/Section";
 import { products } from "@/lib/products";
-import { site } from "@/lib/site";
+import { absolutePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Catalog",
-  description: `${site.name} work footwear: ${products.length} models for the floor, the warehouse, and the site.`,
-};
+export const metadata: Metadata = absolutePageMetadata("catalog");
 
 export default function CatalogPage() {
   return (

@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { site } from "@/lib/site";
+import { pageSeo } from "@/lib/seo";
+import { getSiteUrl, site } from "@/lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -11,13 +12,36 @@ const roboto = Roboto({
   weight: ["400", "500", "700"],
 });
 
+const home = pageSeo.home;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "NORVANT Sport Line",
+    default: home.title,
     template: `%s · ${site.name}`,
   },
-  description: site.description,
+  description: home.description,
   applicationName: site.name,
+  alternates: {
+    canonical: home.path,
+  },
+  openGraph: {
+    title: home.title,
+    description: home.description,
+    url: home.path,
+    siteName: site.name,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: home.title,
+    description: home.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export const viewport: Viewport = {

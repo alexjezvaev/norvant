@@ -6,12 +6,9 @@ import { InternationalPerspective } from "@/components/about/InternationalPerspe
 import { OurApproach } from "@/components/about/OurApproach";
 import { SpecialisedProduction } from "@/components/about/SpecialisedProduction";
 import { WhoWeAre } from "@/components/about/WhoWeAre";
+import { absolutePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "NORVANT work footwear: durability, comfort, and protection for people who work hard every day.",
-};
+export const metadata: Metadata = absolutePageMetadata("about");
 
 export default function AboutPage() {
   return (
