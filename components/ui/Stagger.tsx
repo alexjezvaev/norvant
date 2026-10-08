@@ -1,5 +1,6 @@
 "use client";
 
+import { motionTransition } from "@/lib/motion";
 import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 
@@ -16,14 +17,12 @@ type StaggerItemProps = {
   as?: "div" | "li";
 };
 
-const EASE = [0.22, 1, 0.36, 1] as const;
-
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: EASE },
+    transition: motionTransition.staggerItem,
   },
 };
 

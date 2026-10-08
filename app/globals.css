@@ -17,6 +17,7 @@
   --accent-ink: #ffffff;
   --border: #d8dae3;
   --success: #2f6b4f;
+  --error: #b42318;
   --hero: var(--ink);
   --brand-soft: #e8e9f3;
   --brand-light: #e9f3fc;
@@ -65,6 +66,7 @@
   --color-accent-ink: var(--accent-ink);
   --color-border: var(--border);
   --color-success: var(--success);
+  --color-error: var(--error);
   --color-hero: var(--hero);
   --color-brand: var(--brand);
   --color-brand-soft: var(--brand-soft);

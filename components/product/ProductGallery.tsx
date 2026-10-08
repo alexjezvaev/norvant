@@ -3,13 +3,14 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { motionTransition } from "@/lib/motion";
 import type { Product } from "@/lib/products";
 
 type ProductGalleryProps = {
   product: Product;
 };
 
-const FADE = { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const };
+const FADE = motionTransition.panel;
 /** How many thumbs fit in the strip without scrolling. */
 const VISIBLE_THUMBS = 4;
 /** Matches Tailwind `gap-3` (0.75rem × 3 gaps between 4 items). */

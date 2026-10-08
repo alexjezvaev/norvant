@@ -11,7 +11,6 @@ export function SpecialisedProduction() {
         <Reveal className="h-full min-h-72 md:min-h-0">
           <AboutVideo
             src="/about/specialised-production.mp4"
-            poster="/about/production-footwear.jpg"
             label="Industrial stitching of NORVANT safety footwear"
             className="rounded-lg"
           />

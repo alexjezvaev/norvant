@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-bg/90 backdrop-blur-md">
       <Container className="flex h-[var(--header-height)] items-center gap-6">
-        <Logo />
+        <Logo priority />
 
         <nav aria-label="Main" className="hidden flex-1 sm:block">
           <ul className="flex items-center justify-end gap-1">

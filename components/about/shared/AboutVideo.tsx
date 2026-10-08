@@ -1,11 +1,11 @@
 "use client";
 
+import { FadeInVideo } from "@/components/ui/FadeInVideo";
 import { useEffect, useRef, useSyncExternalStore } from "react";
 
 type AboutVideoProps = {
   src: string;
   label: string;
-  poster?: string;
   className?: string;
 };
 
@@ -28,7 +28,6 @@ function getReducedMotionSnapshot() {
 export function AboutVideo({
   src,
   label,
-  poster,
   className,
 }: AboutVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -64,15 +63,14 @@ export function AboutVideo({
   return (
     <div
       className={cx(
-        "relative h-full min-h-72 overflow-hidden md:min-h-0",
+        "relative h-full min-h-72 overflow-hidden bg-hero md:min-h-0",
         className,
       )}
     >
-      <video
+      <FadeInVideo
         ref={videoRef}
         className="absolute inset-0 size-full object-cover object-center"
         src={src}
-        poster={poster}
         muted
         loop
         playsInline

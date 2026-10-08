@@ -12,7 +12,8 @@
   - one folder per domain feature: `home/`, `about/`, `product/`, `catalog/`.
 - Domain-only building blocks (split layouts, media wrappers, section headers used only inside that domain) live in `components/<domain>/shared/` (e.g. `components/about/shared/`). Do not put those in `components/ui/` or top-level `shared/` until a second domain needs them.
 - Page section components stay at `components/<domain>/SectionName.tsx` (e.g. `WhoWeAre.tsx`, `Advantages.tsx`). Thin wrappers that only pass copy into a shared block are fine (e.g. `AboutCta` → `CtaSection`).
-- `lib/` holds non-UI code: site config, data, and pure helper functions. Do not import React in `lib/`.
+- `lib/` holds non-UI code: site config, data, motion tokens, and pure helper functions. Do not import React in `lib/`.
+- `hooks/` holds shared client hooks (e.g. `useQuoteRequest`). Keep hooks free of JSX.
 - `public/` holds static assets served as-is by URL: logo, `products/` images, `about/` and `home/` media. Reference them with absolute paths (`/logo.svg`, `/about/nor.mp4`).
 
 ### Metadata and icons
@@ -61,6 +62,7 @@
 ### Components and code
 
 - Server Components by default. Add `"use client"` only to the smallest component that needs state, effects, or browser APIs.
+- Do not call `setState` synchronously inside `useEffect` (cascading renders / React Compiler). For client-only mounts (e.g. `createPortal`), use `useSyncExternalStore` with `() => true` on the client and `() => false` on the server — not `useEffect(() => setMounted(true), [])`.
 - One component per file, named in PascalCase, matching the file name. Import with the `@/` alias.
 - Keep route files (`page.tsx`) thin: compose components and call `lib/` functions; no large inline markup or data.
 - Always extract each page section into its own component. Do not leave section markup, section-local lists/data, or multi-block UI inline in `page.tsx` — create a named component under `components/<domain>/` (e.g. `components/home/Stats.tsx`) instead.

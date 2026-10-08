@@ -5,6 +5,9 @@ export const site = {
     "Discover NORVANT professional safety footwear and workwear, designed for reliable protection, lasting comfort and demanding working environments.",
   phone: "+7 (800) 555-12-34",
   email: "hello@norvant.ru",
+  salesEmail: "sales@norvantsafety.com",
+  /** Formspree form ID — https://formspree.io/f/<id> */
+  formspreeFormId: "mzedrgaz",
   address: "14 Industrial Street, Moscow",
   themeColor: "#2f3682",
 } as const;

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { QuoteRequestProvider } from "@/components/shared/QuoteRequest";
 import { pageSeo } from "@/lib/seo";
 import { getSiteUrl, site } from "@/lib/site";
 import "./globals.css";
@@ -53,9 +54,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${roboto.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-bg font-sans text-ink">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <QuoteRequestProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </QuoteRequestProvider>
       </body>
     </html>
   );
