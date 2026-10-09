@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ProductGallery } from "@/components/product/ProductGallery";
+import { QuoteRequestButton } from "@/components/shared/QuoteRequestButton";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -85,9 +86,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </dl>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              <Button href="/contacts" size="lg">
-                Request a quote
-              </Button>
+              <QuoteRequestButton size="lg" />
               <Button href="/catalog" variant="secondary" size="lg">
                 Back to catalog
               </Button>
