@@ -74,7 +74,7 @@ function QuoteRequestUi({ open, onOpen, onClose }: QuoteRequestUiProps) {
         onClick={onOpen}
         aria-haspopup="dialog"
         aria-expanded={open}
-        className="fixed top-1/2 right-0 z-50 hidden h-40 w-10 -translate-y-1/2 translate-x-[calc(100%-0.5rem)] cursor-pointer items-center justify-center rounded-l-md bg-brand text-accent-ink shadow-md transition duration-300 ease-out hover:translate-x-0 hover:brightness-95 focus-visible:translate-x-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:flex"
+        className="fixed top-1/2 right-0 z-50 hidden h-40 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-l-md bg-brand text-accent-ink shadow-md transition duration-300 ease-out hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:flex"
       >
         <span className="rotate-180 text-xs font-semibold tracking-wide whitespace-nowrap [writing-mode:vertical-rl]">
           Request a quote

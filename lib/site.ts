@@ -7,7 +7,7 @@ export const site = {
   email: "hello@norvant.ru",
   salesEmail: "sales@norvantsafety.com",
   /** Formspree form ID — https://formspree.io/f/<id> */
-  formspreeFormId: "mzedrgaz",
+  formspreeFormId: "mwlvoyyq",
   address: "14 Industrial Street, Moscow",
   themeColor: "#2f3682",
 } as const;
